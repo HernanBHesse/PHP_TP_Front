@@ -1,0 +1,100 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  min-width: 100vw;
+}
+
+.scrollContainer {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scrollSection {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+.bannerIndex {
+  background-image: url(../assets/img/puertoMadero.jpg);
+  background-size: cover;
+  filter: contrast(140%);
+  filter: brightness(0.9);
+}
+
+.sectionOne {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10vh 0;
+}
+
+.sectionOne p {
+  font-size: 26px;
+}
+
+.card {
+  --bs-body-bg: rgba(255, 255, 255, 0.301);
+  border: none;
+  color: #fff;
+}
+
+.sectionTwo {
+  padding: 10vh 0;
+}
+
+.sectionTwo p,
+.sectionTwo h5 {
+  color: black;
+}
+
+.sectionTwo .card img {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.sectionThree {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "imgSectionTree textSectionTree";
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sectionThree img {
+  grid-area: imgSectionTree;
+  width: 50vw;
+  height: 100vh;
+}
+.sectionThreeText {
+  grid-area: textSectionTree;
+  margin: auto 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.sectionFour {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  margin: 0 auto;
+  width: 50vw;
+  max-height: 80vh;
+}
+
+footer {
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    padding: 1vh 0;
+    text-align: center;
+    color: white;
+}
